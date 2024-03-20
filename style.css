@@ -1,3 +1,8 @@
+.contact-section {
+  height: 200px;
+  background-color: orange;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +10,10 @@
   list-style: none;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
+}
+
+body._lock {
+  overflow: hidden;
 }
 
 img {
@@ -15,6 +24,15 @@ img {
   max-width: 975px;
   margin: 0 auto;
   padding: 0 5px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #E77105;
 }
 
 .header-content {
@@ -29,15 +47,21 @@ img {
   padding-bottom: 8px;
 }
 
+.nav-icon,
+.nav-info-mobile {
+  display: none;
+}
+
 .nav-box {
   display: flex;
   justify-content: space-between;
 }
 
-.nav-link {
+.nav-link > a {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+  color: #FFFFFF;
 }
 
 .city {
@@ -45,6 +69,7 @@ img {
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
+  color: #FFFFFF;
 }
 
 .phone-number {
@@ -52,19 +77,102 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
+  color: #FFFFFF;
 }
 
+@media (max-width: 767px) {
+  .nav-box {
+    display: block;
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #FBFBFB;
+    padding: 100px 30px 30px 30px;
+    transition: all 0.3s ease 0s;
+  }
+  .nav-box._active {
+    right: 0;
+  }
+  .nav-icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-info-mobile {
+    display: block;
+    padding-top: 90px;
+  }
+  .nav-info-mobile p {
+    padding-bottom: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .nav-icon .fa-solid {
+    font-size: 40px;
+    margin-right: 20px;
+    color: #FFFFFF;
+  }
+  ._hidden {
+    display: none;
+  }
+  ._show {
+    opacity: 0;
+  }
+  .nav-link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
+  .nav-link > a {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 25px;
+    color: #000;
+  }
+  .header-content {
+    flex-wrap: wrap;
+  }
+  .city {
+    order: -3;
+    width: 50%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .logo-header {
+    max-width: 50%;
+  }
+  .phone-number {
+    order: -2;
+    text-align: end;
+    width: 50%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
 .main-banner {
   background-image: url("img/banner.jpg");
   background-size: cover;
-  background-position: right;
   min-height: 480px;
   margin-bottom: 70px;
 }
 
+@media (max-width: 360px) {
+  .main-banner {
+    background-image: url("img/banner_mobile.jpg");
+  }
+}
+.main-content {
+  padding-top: 216px;
+  padding-bottom: 30px;
+}
 .main-content__title {
   max-width: 52%;
-  padding-top: 216px;
   margin-bottom: 15px;
   font-weight: 600;
   font-size: 45px;
@@ -101,6 +209,16 @@ img {
   margin-bottom: 30px;
 }
 
+@media (max-width: 945px) {
+  .subtitle {
+    text-align: center;
+  }
+}
+@media (max-width: 420px) {
+  .subtitle {
+    text-align: left;
+  }
+}
 .servises-box {
   display: flex;
   justify-content: space-between;
@@ -113,6 +231,14 @@ img {
   padding: 20px;
 }
 
+@media (max-width: 945px) {
+  .servises-box {
+    justify-content: center;
+  }
+  .servises-item {
+    margin-bottom: 15px;
+  }
+}
 .servises {
   margin-bottom: 70px;
 }
@@ -142,7 +268,6 @@ img {
 .thesises-box {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .thesises-item {
@@ -152,6 +277,26 @@ img {
   width: 31%;
 }
 
+@media (max-width: 945px) {
+  .thesises-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .thesises-item {
+    width: 51%;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .thesises-item {
+    width: 63%;
+  }
+}
+@media (max-width: 420px) {
+  .thesises-item {
+    width: 100%;
+  }
+}
 .thesis-heading {
   font-weight: 400;
   font-size: 32px;
@@ -191,6 +336,33 @@ img {
   margin-right: 96px;
 }
 
+@media (max-width: 945px) {
+  #callbackform {
+    margin-right: 0;
+  }
+  .callback-content {
+    justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  .callback {
+    background-image: none;
+  }
+  #callbackform {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 400px) {
+  #callbackform {
+    max-width: 350px;
+  }
+}
+@media (max-width: 375px) {
+  #callbackform {
+    max-width: 320px;
+  }
+}
 .form-title {
   font-weight: 500;
   font-size: 20px;
@@ -201,7 +373,6 @@ img {
 }
 
 .form-input {
-  width: 320px;
   margin-bottom: 20px;
   padding: 15px 0 15px 10px;
   font-weight: 400px;

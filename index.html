@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32fa6dd818.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>ProArbor</title>
 </head>
@@ -16,8 +17,13 @@
 <body>
     <header class="header">
         <div class="header-content center">
-            <div class="logo-header"><img src="img/Logo.png" alt="logo"></div>
+            <div class="logo-header"><img src="img/Logo_white.png" alt="logo"></div>
+
             <nav class="nav">
+                <div class="nav-icon">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                    <span class="_hidden"><i class="fa-solid fa-xmark "></i></span>
+                </div>
                 <ul class="nav-box">
                     <li class="nav-link"><a href="index.html"> ГЛАВНАЯ</a></li>
                     <li class="nav-link"><a href=""> УСЛУГИ</a></li>
@@ -27,6 +33,11 @@
                     <li class="nav-link"><a href=""> ПРАЙС</a></li>
                     <li class="nav-link"><a href=""> ОТЗЫВЫ</a></li>
                     <li class="nav-link"><a href="html/Contacts.html"> КОНТАКТЫ</a></li>
+
+                    <li class="nav-info-mobile">
+                        <p>Москва и МО<br>с 9:00 до 21:00 без выходных</p>
+                        <p>+7(999)000-00-00</p>
+                    </li>
                 </ul>
             </nav>
 
@@ -130,6 +141,8 @@
         </div>
         <div class="confidentional-policy"><a class="grey" href="#">политика конфиденциальности</a></div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
