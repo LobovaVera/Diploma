@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: #fff;
+}
+:root {
+    --main-black: rgba(10, 10, 10, 1);
+  --main-grey: #e0e0e0;
+  --main-green: #04b122;
+  --dark-grey: rgba(54, 54, 54, 1);
+  --radio-grey: #D1D1D1;
+  --table-text_grey: rgba(224, 224, 224, 1);
+}
+@mixin title_text {
+  font-weight: 600;
+  text-align: left;
+  font-size: 40px;
+  padding-bottom: 15px;
+}
+@mixin subtitle_text {
+  font-weight: 400;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.calc_center {
+  padding-left: 23%;
+}
+.price {
+  margin-bottom: 70px;
+}
+.price-list {
+  width: 717px;
+  border-collapse: collapse;
+  TD,
+  TH {
+    @include subtitle_text();
+    padding: 3px;
+    border: 2px solid var(--main-grey);
+    width: 69px;
+    height: 50px;
+    text-align: center;
+  }
+  TH {
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px;
+    color: var(--dark-grey);
+  }
+  TD {
+    font-weight: 600;
+  }
+  TR {
+    font-weight: bold;
+  }
+  box-shadow: 2px 3px 2px var(--main-grey);
+}
+.price_head {
+  min-width: 155px;
+}
+.green {
+  color: var(--main-green);
+}
+.thesis-text_price {
+  text-align: left;
+}
+.price-list_title {
+  @include title_text();
+}
+.price-list_subtitle {
+  @include subtitle_text();
+  color: var(--main-black);
+}
+.calc {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.calc_title {
+  @include title_text();
+  margin-bottom: 30px;
+}
+.calc_subtitle {
+  @include subtitle_text();
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--dark-grey);
+  margin-right: 77px;
+}
+.calc_methods_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.calc_methods {
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  column-gap: 71px;
+
+}
+.calc_label {
+  @include subtitle_text();
+  margin-bottom: 0px;
+  color: rgba(0, 0, 0, 1);
+}
+.calc_methods input[name="arb_method"] {
+  --webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--radio-grey);
+  border-radius: 20%;
+}
+.calc_methods input[name="arb_method"]  {
+  display: grid;
+  place-content: center;
+}
+.calc_methods input[name="arb_method"]::before {
+  content: "";
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 20%;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(224, 224, 224, 1);
+}
+
+.calc_methods input[name="arb_method"]:hover::before {
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(141, 141, 141, 1);
+}
+.calc_methods input[name="arb_method"]:checked::before {
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(4, 177, 34, 1);
+}
+.calc_methods input[name="arb_method"]:active::before {
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(141, 141, 141, 1);
+}
+
+.calc_diameter-choise input[name="arb_diametr"] {
+  display: grid;
+  place-content: center;
+}
+
+.calc_diameter-choise input[name="arb_diametr"]::before {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(224, 224, 224, 1);
+}
+
+.calc_diameter-choise input[name="arb_diametr"]:hover::before {
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(141, 141, 141, 1);
+}
+.calc_diameter-choise input[name="arb_diametr"]:checked::before {
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(4, 177, 34, 1);
+}
+.calc_diameter-choise input[name="arb_diametr"]:active::before {
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgba(141, 141, 141, 1);
+}
+
+
+.calc_method_box1, .calc_method_box2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.calc_radio_align{
+  display: flex;
+    column-gap: 10px;
+}
+.calc_radio_align2{
+  display: flex;
+  column-gap: 4px;
+}
+.calc_diameter-choise {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 40px;
+}
+.calc_diameter-choise input[name ="arb_diametr"] {
+    --webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: var(--radio-grey);
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--radio-grey);
+    border-radius: 50%;
+    vertical-align: -3px;
+    margin-right: 4px;
+}
+
+@media(max-width: 811px){
+
+  .calc_methods {
+    margin-bottom: 10px;
+    column-gap: 31px;
+  }
+  .calc_diameter-choise {
+    display: flex;
+    column-gap: 5px;
+}
+}
+
+@media(max-width: 673px){
+  .calc_center {
+    padding-left: 10%;
+  }
+  .calc_methods_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.calc_methods {
+  margin-bottom: 10px;
+  column-gap: 5px;
+}
+}
+@media(max-width: 430px){
+  .calc_methods{
+    display: flex;
+    flex-direction: column;
+  }
+  .calc_diameter-choise{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+.price-list_title{
+  font-size: 26px;
+  font-weight: 600;
+}
+.calc_title{
+  font-size: 26px;
+  font-weight: 600;
+}
+.calc_subtitle{
+  font-size: 20px;
+  font-weight: 500;
+}
+}
+@media(max-width: 375px){
+  .calc_label{
+     margin-bottom: 15px;
+  }
+  .calc_methods{
+    display: flex;
+    flex-direction: column;
+  }
+  .calc_diameter-choise{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+  }
+
+}
