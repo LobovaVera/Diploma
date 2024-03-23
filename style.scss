@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'contacts';
+@import 'servises-main';
 
 * {
     margin: 0;
@@ -71,6 +72,9 @@ img {
     color: #FFFFFF;
 }
 
+.nav-link>a:hover {
+    color: $blackText;
+}
 
 
 .city {
@@ -400,7 +404,7 @@ img {
     background-image: url('img/banner2.jpg');
     background-size: cover;
     min-height: 416px;
-    margin-bottom: 70px;
+
 }
 
 .callback-content {
@@ -483,6 +487,7 @@ img {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    margin-top: 70px;
 }
 
 
