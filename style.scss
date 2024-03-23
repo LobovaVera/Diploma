@@ -1,6 +1,8 @@
 @import 'vars';
 @import 'contacts';
 @import 'servises-main';
+@import 'articles';
+
 
 * {
     margin: 0;
@@ -9,9 +11,18 @@
     list-style: none;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
+    text-decoration-color: $darkGrey;
 
 }
 
+/*
+
+._moved-left
+класс отвечает за смещение влево осн секций на страницах статьи и контакты, при ширине 767 отступ обнуляется(_servises-main.scss)
+ 
+*/
+
+//запрет прокуртки при открытом бургер меню
 body._lock {
     overflow: hidden;
 }
@@ -20,13 +31,17 @@ img {
     max-width: 100%;
 }
 
+input {
+    outline: 0;
+}
+
 .center {
     max-width: 975px;
     margin: 0 auto;
     padding: 0 5px;
 }
 
-//стили для хедера
+//------------------------стили для хедера---------
 .header {
     position: fixed;
     top: 0;
@@ -45,9 +60,7 @@ img {
 
 }
 
-.logo-header {
-    // padding: 8px 0;
-}
+.logo-header {}
 
 .nav {
     width: 50%;
@@ -111,7 +124,7 @@ img {
         height: 100%;
         background-color: $lightGrey;
         padding: 100px 30px 30px 30px;
-        transition: all 0.3s ease 0s;
+        transition: all 0.5s ease 0s;
 
     }
 
@@ -198,11 +211,11 @@ img {
     }
 }
 
-//стили main
+//-----------------------стили main
 .main-banner {
     background-image: url('img/banner.jpg');
     background-size: cover;
-    // background-position: right;
+
     min-height: 480px;
     margin-bottom: 70px;
 }
@@ -249,8 +262,21 @@ img {
     color: #fff;
     background-color: $orange;
     border-radius: 20px;
-    border: none;
+    border: 1px solid transparent;
     text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+
+.btn:hover {
+    color: $orange;
+    background-color: #fff;
+    border: 1px solid $orange;
+}
+
+.btn:active {
+    background-color: #F1AA69;
+    border: 1px solid $orange;
+    color: $orange;
 
 }
 
@@ -467,10 +493,12 @@ img {
 
 }
 
-
+.form-item {
+    position: relative;
+}
 
 .form-input {
-    // width: 320px;
+    width: 100%;
     margin-bottom: 20px;
     padding: 15px 0 15px 10px;
     font-weight: 400px;
@@ -478,7 +506,36 @@ img {
     line-height: 16px;
     border: 1px solid $grey;
     border-radius: 4px;
+    position: relative;
 }
+
+.form-input:hover {
+    box-shadow: 0 1px $grey;
+}
+
+.form-input:focus {
+    box-shadow: 0 1px #0F6CBD;
+}
+
+.form-input:active {
+    box-shadow: 0 1px black;
+}
+
+
+._error {
+    border: 1px solid #D13438;
+
+}
+
+._error-icon::after {
+    content: url('img/error.svg');
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+
+
 
 //footer
 .footer {}
@@ -526,6 +583,11 @@ img {
     color: $darkGrey
 }
 
+.social-liks-box {
+    display: flex;
+    gap: 15px
+}
+
 .social {
 
     &_link {
@@ -548,4 +610,13 @@ img {
 
 .grey {
     color: $darkGrey;
+}
+
+
+
+
+//-------------------Удалить меня
+.classToDelete {
+    margin-top: 200px;
+    font-size: 48px;
 }

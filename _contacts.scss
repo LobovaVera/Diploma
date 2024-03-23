@@ -1,4 +1,40 @@
-.contact-section {
-    height: 200px;
-    background-color: orange;
+.contacts-content {
+    margin-top: 63px;
+    padding-top: 50px;
+    ;
+}
+
+.contacts {
+    &__about {
+        margin-top: -15px;
+        max-width: 300px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #0A0A0A;
+        margin-bottom: 30px;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-bottom: 70px;
+    }
+
+    &__item {}
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 8px;
+    }
 }
