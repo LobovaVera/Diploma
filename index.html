@@ -31,7 +31,7 @@
                             <nobr>О НАС</nobr>
                         </a></li>
                     <li class="nav-link"><a href="html/calc.html"> ПРАЙС</a></li>
-                    <li class="nav-link"><a href=""> ОТЗЫВЫ</a></li>
+                    <li class="nav-link"><a href="html/reviews.html"> ОТЗЫВЫ</a></li>
                     <li class="nav-link"><a href="html/articles.html"> СТАТЬИ</a></li>
                     <li class="nav-link"><a href="html/contacts.html"> КОНТАКТЫ</a></li>
 
@@ -53,7 +53,7 @@
             <h1 class="main-content__title">Обрезка аварийных деревьев</h1>
             <div class="main-content__text">Удаляем деревья по Мосве и Московской области, независимо от типа, возраста,
                 места произрастания</div>
-            <button class="btn">ЗАКАЗАТЬ УСЛУГУ</button>
+            <button onclick="alert('Вера, что здесь должно быть?')" class="btn">ЗАКАЗАТЬ УСЛУГУ</button>
         </div>
     </main>
 
@@ -147,8 +147,15 @@
         </div>
         <div class="confidentional-policy"><a class="grey" href="#">политика конфиденциальности</a></div>
     </footer>
-
+    <div class="popup _right">
+        <div class="popup__content">Спасибо за обращение, мы с вами свяжемся в ближайшее время</div>
+    </div>
+    <div class="popup _wrong">
+        <div class="popup__content">Заполните необходимыe поля</div>
+    </div>
     <script src="script.js"></script>
+    <script src="form_send.js"></script>
+    <script src="validate_form.js"></script>
 </body>
 
 </html>

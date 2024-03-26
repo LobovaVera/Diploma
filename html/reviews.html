@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/32fa6dd818.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>ProArbor</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content center">
+            <div class=".logo-header"><img src="../img/Logo_white.png" alt="logo"></div>
+            <nav class="nav">
+                <div class="nav-icon">
+                    <span><i class="fa-solid fa-bars"></i></span>
+                    <span class="_hidden"><i class="fa-solid fa-xmark "></i></span>
+                </div>
+                <ul class="nav-box">
+                    <li class="nav-link"><a href="../index.html"> ГЛАВНАЯ</a></li>
+                    <li class="nav-link"><a href="servises.html"> УСЛУГИ</a></li>
+                    <li class="nav-link"><a href="">
+                            <nobr>О НАС</nobr>
+                        </a></li>
+                    <li class="nav-link"><a href="calc.html"> ПРАЙС</a></li>
+                    <li class="nav-link"><a href="reviews.html"> ОТЗЫВЫ</a></li>
+                    <li class="nav-link"><a href="articles.html"> СТАТЬИ</a></li>
+                    <li class="nav-link"><a href="contacts.html"> КОНТАКТЫ</a></li>
+
+                    <li class="nav-info-mobile">
+                        <p>Москва и МО<br>с 9:00 до 21:00 без выходных</p>
+                        <p>+7(999)000-00-00</p>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="city">Мытищи</div>
+            <div class="phone-number">+7 (495) 506-74-10</div>
+
+        </div>
+    </header>
+    <section class="reviews">
+        <div class="reviews-box">
+            <h2 class="subtitle">Отзывы</h2>
+            <div class="info">Команда ArboPro предлагает свои профессиональные услуги по спилу деревьев в Москве
+                и Московской области. Работа в условиях ограниченного пространства в городе или на даче вблизи ценных
+                объектов может быть сложной, поэтому наш приоритет - высокий уровень компетентности и ответственности.
+            </div>
+            <h3 class="review__subheadig">Наши отзывы</h3>
+            <div class="review__users">
+
+                <div class="review__item">
+                    <div class="review__text">«Большое спасибо! Ребята быстро подъехали и оперативно спилили аварийное
+                        дерево. Все четко и профессионально. Буду обращаться еще.»</div>
+                    <div class="review__author">— Валентина Петровна</div>
+
+
+                </div>
+                <div class="review__item">
+                    <div class="review__text">«Сработали быстро и аккуратно. Дерево повисло над крышей дома. Должен
+                        признаться, немного переживал, но все прошло отлично. Илья и Саша мастера своего дела, разобрали
+                        дерево моментально. Дом и забор без царапинки..»</div>
+                    <div class="review__author">— Николай Васильевич</div>
+
+                </div>
+
+            </div>
+            <div class="info">
+                <p>
+                    Наш опыт и профессионализм позволяют нам эффективно работать с деревьями
+                    различного уровня сложности. Спил деревьев альпинистами является быстрым и безопасным способом
+                    убрать
+                    аварийное или нежелательное дерева с участка. Мы можем легко убрать дерево, которое растет на крыше
+                    здания или упало на нее, не нанося при этом никаких дополнительных разрушений.</p>
+                <p>
+                    Сейчас все больше людей стремятся создать красивый и безопасный для жизни участок земли, и это
+                    становится настоящим трендом. Мы предлагаем разнообразные предложения, которые подойдут для клиентов
+                    с
+                    разным уровнем жизни и достатка.
+                </p>
+            </div>
+
+
+            <form action="#" id="review-form">
+                <h3 class="review__subheadig">Оставьте отзыв</h3>
+
+                <div class="form-item ">
+                    <input class="form-input" name="user-name" id="user-name" type="text" placeholder="Иван">
+                </div>
+                <div class="form-item ">
+                    <input class="form-input _user-phone" type="text" name="user-phone" id="user-phone"
+                        placeholder="+7(___)___-__-__">
+                </div>
+                <div class="form-item ">
+                    <textarea maxlength="500" class="user-review form-input" name="user-review"
+                        id="user-review"></textarea>
+                </div>
+                <div class="counter">0/500</div>
+                <button class="btn">Отправить</button>
+
+            </form>
+
+    </section>
+
+    <div class="popup _right">
+        <div class="popup__content">Ваш отзыв был успешно добавлен!</div>
+    </div>
+    <div class="popup _wrong">
+        <div class="popup__content">Заполните необходимыe поля</div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content center">
+            <div class="logo"><img src="../img/Logo.png" alt="logo"></div>
+
+            <div class="contact">
+                <div class="contact-type">телефон</div>
+                <div class="contact-info">+7 (495) 506-74-10</div>
+            </div>
+            <div class="contact">
+                <div class="contact-type">почта</div>
+                <div class="contact-info">pro_arbo@gmail.com</div>
+            </div>
+            <div class="contact">
+                <div class="contact-type">социальные сети</div>
+                <div class="contact-info social-liks-box">
+                    <a href="#" class="social_link">В контакте</a>
+                    <a href="#" class="social_link">YouTube</a>
+                    <a href="#" class="social_link">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="confidentional-policy"><a class="grey" href="#">политика конфиденциальности</a></div>
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+    <script src="../review_send.js"></script>
+    <script src="../validate_form.js"></script>
+</body>
+
+</html>

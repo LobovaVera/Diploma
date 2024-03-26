@@ -1,0 +1,157 @@
+.articles-banner {
+    background-image: url('img/banner_articles.jpg');
+    min-height: 318px;
+    margin-top: 63px;
+    margin-bottom: 50px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.articles {}
+
+.articles-box {
+    margin-left: 23%;
+}
+
+.article {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+    border: 1px solid $grey;
+    border-radius: 20px;
+    margin-bottom: 20px;
+
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 48%;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        color: #161616;
+
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+
+        color: $darkGrey;
+        text-decoration: underline;
+
+    }
+
+    &__btn:hover {
+        color: $green;
+    }
+
+    &__img {
+        width: 48%;
+    }
+}
+
+@media(max-width:767px) {
+    .articles-box {
+        margin-left: 0;
+    }
+}
+
+@media(max-width:425px) {
+    .article {
+        flex-direction: column;
+
+        &__descr {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            order: 1;
+            gap: 38px;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__img>img {
+            border-radius: 20px;
+        }
+
+        &__btn {
+
+            align-self: flex-end;
+
+        }
+
+
+    }
+}
+
+//стили для страниц статей
+
+
+._article01 {
+    background-image: url('img/article01_main.jpg');
+
+}
+
+._article02 {
+    background-image: url(); //баннер для статьи 2
+}
+
+._article03 {
+    background-image: url(); //баннер для статьи 3
+}
+
+.article-body {
+    max-width: 494px;
+    margin: 0 auto;
+    padding: 0 5px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 36px;
+        color: $darkGrey;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: #161616;
+        text-align: justify;
+    }
+
+    &__text>p {
+        margin-bottom: 20px;
+    }
+
+    &__img {
+        margin-bottom: 30px;
+    }
+}
+
+.goto-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    transition: color 0.3s ease;
+}
+
+.goto-link:hover a {
+    color: $green;
+}
+
+.fa-arrow-right-long {
+    margin-left: 15px;
+}
